@@ -1,25 +1,90 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Point Zero One</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="header-div">
+                <h1 id="header-h1">Point Zero One</h1>
+                <span id="header-span">A fictional financial services firm.</span>
+            </div>
+        </header>
+        <main>
+            <div id="main-div">
+                <div id="selector-div">
+                    
+                </div>
+                <div id="display-div">
+                    <div id="company-div">
+                        <div id="company-h2-div">
+                            <h2 id="company-h2">Company</h2>
+                        </div>
+                        <div id="company-display-div">
+                            <div id="company-sector-div">
+                                <span id="company-sector-span"></span>
+                            </div>
+                            <div id="company-industry-div">
+                                <span id="company-industry-span"></span>
+                            </div>
+                            <div id="company-name-div">
+                                <h1 id="company-name-h1"></h1>
+                            </div>
+                            <div id="company-price-div">
+                                <h1 id="company-price-h1"></h1>
+                            </div>
+                            <div id="company-variance-div">
+                                <span id="company-variance-span"></span>
+                                <span id="company-percentage-span"></span>
+                            </div>
+                        </div>
+                        <div id="quote-display-div">
+                            <div id="company-quote-div">
+                                <div id="company-ticker-div">
+                                    <span class="company-ticker-span">Ticker:&nbsp;</span>
+                                    <span class="company-ticker-span" id="co-tic-span"></span>
+                                </div>
+                                <div id="company-ask-div">
+                                    <span class="company-ask-span">Ask:&nbsp;</span>
+                                    <span class="company-ask-span" id="co-ask-span"></span>
+                                </div>
+                                <div id="company-bid-div">
+                                    <span class="company-bid-span">Bid:&nbsp;</span>
+                                    <span class="company-bid-span" id="co-bid-span"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a id="iex" href="https://iexcloud.io" target="_blank">Data provided by IEX Cloud</a>
+                    </div>
+                    <div id="historical-graph-div">
+                        <div id="historical-h2-div">
+                            <h2 id="historical-h2">Historical Prices</h2>
+                        </div>
+                        <div id="historical-plot-div">
 
-{% block content %}
+                        </div>
+                    </div>
+                    <div id="about-div">
 
-    <body id='dashboard-body'>
+                    </div>
+                    <div id="news-div">
 
-        <div id='tickers-div'>
+                    </div>
+                    <div id="earnings-div">
 
-        </div>
-    
-        <div id='company-div'>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
 
-        </div>
-
-        <div id='historical-graph-div' style="height: 300px; width: 100%;">
-
-        </div>
-
-        <div id='earnings-graph-div'>
-
-        </div>
-
+        </footer>
     </body>
-
-{% endblock %}
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</html>

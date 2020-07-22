@@ -1,0 +1,19 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #ECF0F6;
+    --lighter-background-color: #f7f8fb;
+    --on-background-color: rgb(32, 42, 53);
+    --primary-color: rgb(0, 200, 5);
+    --secondary-color: rgb(255, 80, 0);
+    --iex-color: #E30073;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    background-color: var(--background-color);
+}

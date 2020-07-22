@@ -1,0 +1,42 @@
+/* iPhone 5/SE and iPod */
+/* Handle range from 320 x 568 and lower */
+@media screen and (max-width: 320px) {
+    #selector-div {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        margin: auto;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    #tickers-div {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        margin: auto 2px;
+        width: 80px;
+    }
+
+    .tickers-button {
+        border: transparent;
+        border-radius: 10px;
+        background-color: var(--lighter-background-color);
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 30px;
+        width: 65px;
+    }
+
+    .tickers-button:hover {
+        cursor: pointer;
+        color: var(--lighter-background-color);
+        background-color: var(--on-background-color);
+    }
+
+}

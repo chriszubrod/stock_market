@@ -211,13 +211,117 @@ def get_historical_prices(ticker):
             # Add to list historical_dict.
             historical_dict[ticker] = historical_list
 
-            # Return company_dict to client.
+            # Return historical_dict to client.
             return historical_dict
 
         except Exception as e:
 
             # Print Exception
             print(e)
+
+
+# App route for earnings uri.
+@app.route('/earnings/<string:ticker>', methods=['GET'])
+def get_earnings(ticker):
+    '''Query database for earnings price data and return dictionary result.
+
+    Args:
+        ticker - string symbol for ticker.
+
+    Returns:
+        earnings - dictionary of earnings data for ticker.
+    '''
+    # Create connection variable.
+    with open_db_connection() as conn:
+
+        # Try to execute query, format data in dictionary and return to client.
+        try:
+
+            # Create cursor variable.
+            cursor = conn.cursor()
+
+            # Execute sql query with cursor variable.
+            cursor.execute(
+                '''
+                SELECT *
+                FROM
+                (
+                    SELECT TOP (4) fiscal_end_date, actual_eps, consensus_eps
+                    FROM earnings
+                    WHERE ticker_symbol = '{}'
+                    ORDER BY fiscal_end_date DESC
+                ) AS t
+                ORDER BY fiscal_end_date ASC;
+                '''.format(ticker)
+            )
+
+            # Create dictionary variable.
+            earnings_dict = {}
+
+            # Create list variable.
+            earnings_list = []
+
+            # Loop through company data list, and append to earnings_list.
+            for row in cursor:
+                earnings_list.append(
+                    {
+                        'fiscal_end_date': row[0],
+                        'actual_eps': str(row[1]),
+                        'consensus_eps': str(row[2])
+                    }
+                )
+
+            # Add to list earnings_dict.
+            earnings_dict[ticker] = earnings_list
+
+            # Return earnings_dict to client.
+            return earnings_dict
+
+        except Exception as e:
+
+            # Print Exception
+            print(e)
+
+
+# App route for live price uri.
+@app.route('/live/<string:ticker>', methods=['GET'])
+def get_iex_quote(ticker):
+    '''Query IEX Cloud for quote data and return dictionary result.
+
+    Args:
+        ticker - string symbol for ticker.
+
+    Returns:
+        quote - dictionary of price data for ticker.
+    '''
+    # Create url variable for IEX Cloud API Quote endpoint.
+    _url = (
+        "https://cloud.iexapis.com/v1/stock/"
+        + ticker
+        + "/quote?token="
+        + SECRETS_JSON['iex']['Tkn']
+    )
+
+    # Try to execute api request, and return to client.
+    try:
+
+        # Create response to request.get() method, and pass in url variable.
+        response = requests.get(_url)
+
+        # Create data variable for response,
+        # and format as json datatype with method call.
+        data = response.json()
+
+        # Close request.
+        response.close()
+
+        # Return data in string format. Ex. "35.45"
+        return data
+
+    except Exception as e:
+
+        # Print Exception
+        print(e)
 
 
 # Used only for local development.
