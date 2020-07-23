@@ -1,7 +1,7 @@
 /* iPhone 5/SE and iPod */
 /* Handle range from 320 x 568 and lower */
 @media screen and (max-width: 320px) {
-    #about-div {
+    #news-div {
         background-color: var(--lighter-background-color);
         border: transparent;
         border-radius: 10px;
@@ -12,7 +12,7 @@
         min-height: 250px;
     }
 
-    #about-h2-div {
+    #news-h2-div {
         align-items: center;
         border-bottom: solid 1px var(--on-background-color);
         display: flex;
@@ -22,7 +22,7 @@
         width: calc(100% - 10px);
     }
 
-    #about-h2 {
+    #news-h2 {
         color: var(--on-background-color);
         font-family: var(--font-family);
         font-size: 19px;
@@ -33,17 +33,15 @@
         text-transform: uppercase;
     }
 
-    #description-div {
+    #news-source-div {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        margin: 0px 10px 10px 5px;
-        max-height: 110px;
-        overflow-y: scroll;
+        justify-content: flex-start;
+        margin: 0px 5px;
         width: calc(100% - 10px);
     }
 
-    #description-p {
+    .news-source-span {
         color: var(--on-background-color);
         font-family: var(--font-family);
         font-size: 13px;
@@ -51,36 +49,19 @@
         font-weight: 700;
         letter-spacing: -0.1px;
         line-height: 20px;
+        margin-right: 5px;
     }
 
-    #ceo-div {
-        align-items: flex-start;
+    #news-headline-div {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: flex-start;
         margin: 0px 5px 10px 5px;
         width: calc(100% - 10px);
     }
 
-    .ceo {
-        color: var(--on-background-color);
-        font-family: var(--font-family);
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -0.1px;
-        line-height: 20px;
-    }
-
-    #website-div {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin: 0px 5px 10px 5px;
-        width: calc(100% - 10px);
-    }
-
-    .website {
-        color: var(--on-background-color);
+    #news-headline-a {
+        color: var(--tertiary-color);
         font-family: var(--font-family);
         font-size: 13px;
         font-style: normal;
@@ -90,55 +71,20 @@
         text-decoration: none;
     }
 
-    #website-a:hover {
+    #news-headline-a:hover {
         cursor: pointer;
         text-decoration: underline;
     }
 
-    #exchange-div {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin: 0px 5px 10px 5px;
-        width: calc(100% - 10px);
-    }
-
-    .exchange {
-        color: var(--on-background-color);
-        font-family: var(--font-family);
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -0.1px;
-        line-height: 20px;
-    }
-
-    #address-div {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin: 0px 5px 10px 5px;
-        width: calc(100% - 10px);
-    }
-
-    .address {
-        color: var(--on-background-color);
-        font-family: var(--font-family);
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -0.1px;
-        line-height: 20px;
-    }
-
-    #c-s-z-div {
+    #news-summary-div {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        margin: 0px 5px 10px 5px;
         width: calc(100% - 10px);
     }
 
-    .c-s-z {
+    #news-summary-p {
         color: var(--on-background-color);
         font-family: var(--font-family);
         font-size: 13px;
@@ -148,9 +94,17 @@
         line-height: 20px;
     }
 
-    .label {
-        color: var(--tertiary-color);
-        text-transform: uppercase;
+    #news-image-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #news-img {
+        width: calc(100% - 10px);
+        margin: 0px auto;
     }
 
 }

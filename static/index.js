@@ -3,6 +3,7 @@ let company_data = {};
 let historical_price_data = {};
 let earnings_data = {};
 let quote_data = {};
+let news_data = {};
 var v;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -81,7 +82,18 @@ function get_quote_data(ticker) {
             quote_data = response;
         };
     };
-    xhttp.open("GET", "/live/" + ticker, false);
+    xhttp.open("GET", "/live/quote/" + ticker, false);
+    xhttp.send();
+}
+
+function get_news_data(ticker) {
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let response = JSON.parse(this.responseText);
+            news_data = response;
+        };
+    };
+    xhttp.open("GET", "/live/news/" + ticker, false);
     xhttp.send();
 }
 
@@ -92,7 +104,9 @@ async function update(ticker) {
     get_historical_price_data(ticker);
     get_earnings_data(ticker);
     get_quote_data(ticker);
+    get_news_data(ticker);
 
+    // About Section
     document.getElementById("company-sector-span").innerText = company_data['sector'];
     document.getElementById("company-industry-span").innerText = company_data['industry'];
     document.getElementById("company-name-h1").innerText = company_data['name'];
@@ -103,6 +117,7 @@ async function update(ticker) {
     document.getElementById("co-ask-span").innerText = quote_data['iexAskSize'] + ' @ ' + '$' + quote_data['iexAskPrice'].toFixed(2);
     document.getElementById("co-bid-span").innerText = quote_data['iexBidSize'] + ' @ ' + '$' + quote_data['iexBidPrice'].toFixed(2);
 
+    // Historical Prices Section
     let keys = Object.keys(historical_price_data);
     let prices = historical_price_data[keys[0]];
     let dates = [];
@@ -137,8 +152,8 @@ async function update(ticker) {
     var layout = {
         autosize: true,
         margin: {
-            l: 0,
-            r: 0,
+            l: 5,
+            r: 5,
             b: 0,
             t: 0,
             pad: 0
@@ -148,12 +163,14 @@ async function update(ticker) {
         xaxis: {
             showgrid: false,
             showline: false,
-            zeroline: false
+            zeroline: false,
+            showticklabels: false
         },
         yaxis: {
             showgrid: false,
             showline: false,
-            zeroline: false
+            zeroline: false,
+            showticklabels: false
         }
     };
 
@@ -169,6 +186,7 @@ async function update(ticker) {
         e.fontcolor = c;
     };
 
+    // About Section
     document.getElementById("description-p").innerText = company_data['description'];
     document.getElementById("ceo-span").innerText = company_data['ceo'];
     document.getElementById("website-a").innerText = company_data['website'];
@@ -178,4 +196,12 @@ async function update(ticker) {
     document.getElementById("state-span").innerText = company_data['state'];
     document.getElementById("zip-span").innerText = company_data['zip'];
 
+    // News Section
+    let d = new Date(news_data['datetime']);
+    document.getElementById("source-date").innerText = d.toLocaleDateString('en-US');
+    document.getElementById("source").innerText = news_data['source'];
+    document.getElementById("news-headline-a").innerText = news_data['headline'];
+    document.getElementById("news-headline-a").setAttribute('href', news_data['url']);
+    document.getElementById("news-summary-p").innerText = news_data['summary'];
+    document.getElementById("news-img").setAttribute('src', news_data['image']);
 }

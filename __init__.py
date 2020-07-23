@@ -292,7 +292,7 @@ def get_earnings(ticker):
 
 
 # App route for live price uri.
-@app.route('/live/<string:ticker>', methods=['GET'])
+@app.route('/live/quote/<string:ticker>', methods=['GET'])
 def get_iex_quote(ticker):
     '''Query IEX Cloud for quote data and return dictionary result.
 
@@ -300,7 +300,7 @@ def get_iex_quote(ticker):
         ticker - string symbol for ticker.
 
     Returns:
-        quote - dictionary of price data for ticker.
+        quote - dictionary of quote data for ticker.
     '''
     # Create url variable for IEX Cloud API Quote endpoint.
     _url = (
@@ -323,8 +323,52 @@ def get_iex_quote(ticker):
         # Close request.
         response.close()
 
-        # Return data in string format. Ex. "35.45"
+        # Return data in json format.
         return data
+
+    except Exception as e:
+
+        # Print Exception
+        print(e)
+
+
+# App route for live price uri.
+@app.route('/live/news/<string:ticker>', methods=['GET'])
+def get_iex_news(ticker):
+    '''Query IEX Cloud for news data and return dictionary result.
+
+    Args:
+        ticker - string symbol for ticker.
+
+    Returns:
+        news - dictionary of news data for ticker.
+    '''
+    # Create url variable for IEX Cloud API News endpoint.
+    _url = (
+        "https://cloud.iexapis.com/v1/stock/"
+        + ticker
+        + "/news/last/1?token="
+        + SECRETS_JSON['iex']['Tkn']
+    )
+
+    # Try to execute api request, and return to client.
+    try:
+
+        # Create response to request.get() method, and pass in url variable.
+        response = requests.get(_url)
+
+        # Create data variable for response,
+        # and format as json datatype with method call.
+        data = response.json()
+
+        # Close request.
+        response.close()
+
+        # Response variable is returned as a list of dictionaries.
+        # For now, we are only going to return the first dictionary
+        # within the list.
+        # Return data in json format.
+        return data[0]
 
     except Exception as e:
 
