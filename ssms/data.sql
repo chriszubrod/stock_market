@@ -6,7 +6,7 @@ WHERE [date] = (
 )
 ORDER BY ([close] * volume) DESC;
 
-SELECT [name], website, sector, industry, [description]
+SELECT [name], industry, sector, exchange, website, [description], ceo, [address], [state], city, zip
 FROM company
 WHERE ticker_symbol = 'AAPL';
 

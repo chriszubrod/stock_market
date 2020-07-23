@@ -112,9 +112,16 @@ async function update(ticker) {
         price.push(prices[p]['close']);
     }
 
+    var c = '';
+    if (price[0] > price[price.length - 1]) {
+        c = 'rgb(255, 80, 0)'
+    } else {
+        c = '#56C271'
+    };
+
     var trace = {
         line: {
-            color: 'rgb(32, 42, 53)'
+            color: c
         },
         hovertemplate: '$%{y:.2f}<br>%{x}',
         mode: "lines",
@@ -122,8 +129,7 @@ async function update(ticker) {
         showLegend: "false",
         type: "scatter",
         x: dates,
-        y: price,
-        
+        y: price
     };
 
     var data = [trace];
@@ -156,5 +162,20 @@ async function update(ticker) {
     }
 
     Plotly.newPlot('historical-plot-div', data, layout, options);
+
+    let el = document.getElementsByClassName("all-cap");
+    console.log(el);
+    for (e in el) {
+        e.fontcolor = c;
+    };
+
+    document.getElementById("description-p").innerText = company_data['description'];
+    document.getElementById("ceo-span").innerText = company_data['ceo'];
+    document.getElementById("website-a").innerText = company_data['website'];
+    document.getElementById("exchange-span").innerText = company_data['exchange'];
+    document.getElementById("address-span").innerText = company_data['address'];
+    document.getElementById("city-span").innerText = company_data['city'];
+    document.getElementById("state-span").innerText = company_data['state'];
+    document.getElementById("zip-span").innerText = company_data['zip'];
 
 }

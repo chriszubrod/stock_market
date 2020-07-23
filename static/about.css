@@ -1,0 +1,156 @@
+/* iPhone 5/SE and iPod */
+/* Handle range from 320 x 568 and lower */
+@media screen and (max-width: 320px) {
+    #about-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 5px;
+        min-height: 250px;
+    }
+
+    #about-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #about-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #description-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 10px 10px 5px;
+        max-height: 110px;
+        overflow-y: scroll;
+        width: calc(100% - 10px);
+    }
+
+    #description-p {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #ceo-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    .ceo {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #website-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    .website {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        text-decoration: none;
+    }
+
+    #website-a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    #exchange-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    .exchange {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #address-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    .address {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #c-s-z-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: calc(100% - 10px);
+    }
+
+    .c-s-z {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    .label {
+        color: #5099FF;
+        text-transform: uppercase;
+    }
+
+}

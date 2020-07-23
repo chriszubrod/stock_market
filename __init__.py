@@ -127,7 +127,8 @@ def get_company(ticker):
             # This query returns company data.
             cursor.execute(
                 '''
-                SELECT [name], website, sector, industry, [description]
+                SELECT [name], industry, sector, exchange, website,
+                [description], ceo, [address], [state], city, zip
                 FROM company
                 WHERE ticker_symbol = '{}';
                 '''.format(ticker)
@@ -139,10 +140,16 @@ def get_company(ticker):
             # Loop through company data list, and append to company_dict.
             for row in cursor:
                 company_dict['name'] = row[0]
-                company_dict['website'] = row[1]
+                company_dict['industry'] = row[1]
                 company_dict['sector'] = row[2]
-                company_dict['industry'] = row[3]
-                company_dict['description'] = row[4]
+                company_dict['exchange'] = row[3]
+                company_dict['website'] = row[4]
+                company_dict['description'] = row[5]
+                company_dict['ceo'] = row[6]
+                company_dict['address'] = row[7]
+                company_dict['state'] = row[8]
+                company_dict['city'] = row[9]
+                company_dict['zip'] = row[10]
 
             # Return company_dict to client.
             return company_dict
@@ -180,7 +187,8 @@ def get_historical_prices(ticker):
                 SELECT *
                 FROM
                 (
-                    SELECT TOP (100) [date], [open], [high], [low], [close], [volume]
+                    SELECT TOP (100) [date], [open], [high], [low], [close],
+                    [volume]
                     FROM historical_prices
                     WHERE ticker_symbol = '{}'
                     ORDER BY [date] DESC
