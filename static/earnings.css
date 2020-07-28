@@ -34,3 +34,184 @@
     }
 
 }
+
+/* Cell Phone */
+/* Handle common ranges from 360 x 640 to 480 x 853 */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    #earnings-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    #earnings-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #earnings-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+}
+
+/* Tablet */
+/* Handle common ranges from 600 x 960 to 800 x 1280 */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    #earnings-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    #earnings-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #earnings-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}
+
+/* Laptop */
+/* Handle common ranges from 1024 x 1366 to 1112 x 834 */
+@media screen and (min-width: 801px) and (max-width: 1112px) {
+    #earnings-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    #earnings-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #earnings-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}
+
+/* Desktop */
+/* Handle common width ranges from 1113 to 1799 */
+@media screen and (min-width: 1113px) and (max-width: 1799px) {
+    #earnings-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    #earnings-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #earnings-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}
+
+/* Oversize Desktop */
+/* Handle common width ranges from 1800 and up */
+@media screen and (min-width: 1800px) {
+    #earnings-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    #earnings-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #earnings-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}

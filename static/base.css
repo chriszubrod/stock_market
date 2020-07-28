@@ -18,3 +18,7 @@
 html {
     background-color: var(--background-color);
 }
+
+body.waiting * {
+    cursor: progress;
+}

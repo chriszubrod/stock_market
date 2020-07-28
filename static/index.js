@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
     xhttp.send();
 });
 
-
-
 function get_company_data(ticker) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -118,8 +116,8 @@ async function update(ticker) {
     document.getElementById("co-bid-span").innerText = quote_data['iexBidSize'] + ' @ ' + '$' + quote_data['iexBidPrice'].toFixed(2);
 
     // Historical Prices Section
-    let keys = Object.keys(historical_price_data);
-    let prices = historical_price_data[keys[0]];
+    // let keys = Object.keys(historical_price_data);
+    let prices = historical_price_data[ticker];
     let dates = [];
     let price = [];
     for (p in prices) {
@@ -140,8 +138,7 @@ async function update(ticker) {
         },
         hovertemplate: '$%{y:.2f}<br>%{x}',
         mode: "lines",
-        name: 'close',
-        showLegend: "false",
+        name: 'Close',
         type: "scatter",
         x: dates,
         y: price
@@ -151,45 +148,52 @@ async function update(ticker) {
 
     var layout = {
         autosize: true,
+        height: 200,
         margin: {
-            l: 5,
+            l: 45,
             r: 5,
             b: 0,
-            t: 0,
+            t: 5,
             pad: 0
         },
         paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'rgba(0,0,0,0)', //'#f7f8fb'
+        plot_bgcolor: 'rgba(0,0,0,0)',
         xaxis: {
             showgrid: false,
             showline: false,
             zeroline: false,
-            showticklabels: false
+            showticklabels: false,
+            rangeslider: {
+                range: [dates[0], dates[dates.length - 1]]
+            }
         },
         yaxis: {
             showgrid: false,
             showline: false,
             zeroline: false,
-            showticklabels: false
+            showticklabels: true,
+            tickfont: {
+                family: 'Montserrat, sans-serif',
+                size: 13,
+                color: 'rgb(32, 42, 53)'
+            },
+            tickformat: '$',
+            zeroline: false,
         }
     };
 
     var options = {
-        displayModeBar: false
+        displayModeBar: false,
+        responsive: true
     }
 
     Plotly.newPlot('historical-plot-div', data, layout, options);
-
-    let el = document.getElementsByClassName("all-cap");
-    console.log(el);
-    for (e in el) {
-        e.fontcolor = c;
-    };
 
     // About Section
     document.getElementById("description-p").innerText = company_data['description'];
     document.getElementById("ceo-span").innerText = company_data['ceo'];
     document.getElementById("website-a").innerText = company_data['website'];
+    document.getElementById("website-a").setAttribute('href', company_data['website']);
     document.getElementById("exchange-span").innerText = company_data['exchange'];
     document.getElementById("address-span").innerText = company_data['address'];
     document.getElementById("city-span").innerText = company_data['city'];
@@ -204,4 +208,85 @@ async function update(ticker) {
     document.getElementById("news-headline-a").setAttribute('href', news_data['url']);
     document.getElementById("news-summary-p").innerText = news_data['summary'];
     document.getElementById("news-img").setAttribute('src', news_data['image']);
+
+    // Earnings Section
+    let earnings = earnings_data[ticker];
+    let edates = [];
+    let eactual = [];
+    let econsensus = [];
+    for (e in earnings) {
+        edates.push(earnings[e]['fiscal_end_date']);
+        eactual.push(earnings[e]['actual_eps']);
+        econsensus.push(earnings[e]['consensus_eps']);
+    }
+
+    var atrace = {
+        line: {
+            color: '#56C271'
+        },
+        mode: "markers",
+        name: 'Act',
+        type: "scatter",
+        x: edates,
+        y: eactual,
+    };
+
+    var ctrace = {
+        line: {
+            color: 'rgb(255, 80, 0)'
+        },
+        mode: "markers",
+        name: 'Cons',
+        type: "scatter",
+        x: edates,
+        y: econsensus,
+    };
+
+    var edata = [atrace, ctrace];
+
+    var elayout = {
+        autosize: true,
+        height: 200,
+        margin: {
+            l: 30,
+            r: 5,
+            b: 5,
+            t: 0,
+            pad: 0
+        },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        showLegend: false,
+        xaxis: {
+            showgrid: false,
+            showline: false,
+            showticklabels: true,
+            tickfont: {
+                family: 'Montserrat, sans-serif',
+                size: 13,
+                color: 'rgb(32, 42, 53)'
+            },
+            zeroline: false
+        },
+        yaxis: {
+            showgrid: false,
+            showline: false,
+            showticklabels: true,
+            tickfont: {
+                family: 'Montserrat, sans-serif',
+                size: 13,
+                color: 'rgb(32, 42, 53)'
+            },
+            tickformat: '$',
+            zeroline: false,
+        }
+    };
+
+    var eoptions = {
+        displayModeBar: false,
+        responsive: true
+    }
+
+    Plotly.newPlot('earnings-plot-div', edata, elayout, eoptions);
+
 }

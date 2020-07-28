@@ -183,3 +183,967 @@
         text-decoration: underline;
     }
 }
+
+
+/* Cell Phone */
+/* Handle common ranges from 360 x 640 to 480 x 853 */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    #company-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 5px;
+        min-height: 250px;
+    }
+
+    #company-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #company-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #company-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-sector-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-industry-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-name-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+    
+    #company-price-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+
+    #company-variance-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-percentage-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #quote-display-div {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-quote-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #company-ticker-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ticker-span {
+        align-self: flex-end;
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-ask-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ask-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-bid-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-bid-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #iex {
+        color: var(--iex-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+    
+    #iex:hover {
+        text-decoration: underline;
+    }
+
+}
+
+/* Tablet */
+/* Handle common ranges from 600 x 960 to 800 x 1280 */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    #company-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 5px;
+        min-height: 250px;
+    }
+
+    #company-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #company-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #middle-company-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #company-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-sector-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-industry-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-name-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+    
+    #company-price-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+
+    #company-variance-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-percentage-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #quote-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-quote-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #company-ticker-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ticker-span {
+        align-self: flex-end;
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-ask-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ask-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-bid-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-bid-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #iex {
+        color: var(--iex-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+    
+    #iex:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Laptop */
+/* Handle common ranges from 1024 x 1366 to 1112 x 834 */
+@media screen and (min-width: 801px) and (max-width: 1112px) {
+    #company-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2px;
+        min-height: 250px;
+    }
+
+    #company-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #company-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #middle-company-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #company-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-sector-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-industry-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-name-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+    
+    #company-price-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+
+    #company-variance-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-percentage-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #quote-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-quote-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #company-ticker-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ticker-span {
+        align-self: flex-end;
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-ask-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ask-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-bid-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-bid-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #iex {
+        color: var(--iex-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+    
+    #iex:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Desktop */
+/* Handle common width ranges from 1113 to 1799 */
+@media screen and (min-width: 1113px) and (max-width: 1799px) {
+    #company-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2px;
+        min-height: 250px;
+    }
+
+    #company-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #company-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #middle-company-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #company-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-sector-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-industry-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-name-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+    
+    #company-price-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+
+    #company-variance-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-percentage-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #quote-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-quote-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #company-ticker-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ticker-span {
+        align-self: flex-end;
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-ask-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ask-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-bid-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-bid-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #iex {
+        color: var(--iex-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+    
+    #iex:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Oversize Desktop */
+/* Handle common width ranges from 1800 and up */
+@media screen and (min-width: 1800px) {
+    #company-div {
+        background-color: var(--lighter-background-color);
+        border: transparent;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2px;
+        min-height: 250px;
+    }
+
+    #company-h2-div {
+        align-items: center;
+        border-bottom: solid 1px var(--on-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin: 0px 5px 10px 5px;
+        width: calc(100% - 10px);
+    }
+
+    #company-h2 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    #middle-company-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #company-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-sector-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-industry-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-name-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+    
+    #company-price-h1 {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        line-height: 40px;
+    }
+
+    #company-variance-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-percentage-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #quote-display-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    #company-quote-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #company-ticker-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ticker-span {
+        align-self: flex-end;
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-ask-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-ask-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #company-bid-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .company-bid-span {
+        color: var(--on-background-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+    }
+
+    #iex {
+        color: var(--iex-color);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        line-height: 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+    
+    #iex:hover {
+        text-decoration: underline;
+    }
+}

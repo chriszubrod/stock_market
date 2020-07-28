@@ -5,6 +5,7 @@
         display: flex;
         flex-direction: row;
         height: calc(100% - 100px - 100px);
+        justify-content: center;
     }
 
     #main-div {
@@ -12,6 +13,116 @@
         flex-direction: column;
         height: 100%;
         justify-content: center;
+        margin: auto;
+        width: 90%;
+    }
+}
+
+
+/* Cell Phone */
+/* Handle common ranges from 360 x 640 to 480 x 853 */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 100px - 100px);
+        justify-content: center;
+    }
+
+    #main-div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        margin: auto;
+        width: 90%;
+    }
+}
+
+/* Tablet */
+/* Handle common ranges from 600 x 960 to 800 x 1280 */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 100px - 100px);
+        justify-content: center;
+    }
+
+    #main-div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        margin: auto;
+        width: 90%;
+    }
+}
+
+/* Laptop */
+/* Handle common ranges from 1024 x 1366 to 1112 x 834 */
+@media screen and (min-width: 801px) and (max-width: 1112px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 100px - 100px);
+        justify-content: center;
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    #main-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: flex-start;
+        margin: auto;
+        width: 90%;
+    }
+}
+
+/* Desktop */
+/* Handle common width ranges from 1113 to 1799 */
+@media screen and (min-width: 1113px) and (max-width: 1799px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 100px - 100px);
+        justify-content: center;
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    #main-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: flex-start;
+        margin: auto;
+        width: 90%;
+    }
+}
+
+/* Oversize Desktop */
+/* Handle common width ranges from 1800 and up */
+@media screen and (min-width: 1800px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 100px - 100px);
+        justify-content: center;
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    #main-div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: flex-start;
         margin: auto;
         width: 90%;
     }
